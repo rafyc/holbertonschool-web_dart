@@ -16,7 +16,7 @@ class Password {
 
     String toString() {
         return (
-            'Your Password is ${password}'
+            'Your Password is: ${password}'
         );
     }
 }
