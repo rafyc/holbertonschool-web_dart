@@ -1,14 +1,14 @@
-class _Password {
-    String password = '';
-
+class Password {
+    String _password = '';
+    Password({required String password}) : _password = password;
     bool isValid() {
-        if (password.length < 8 || password.length > 16) {
+        if (_password.length < 8 || _password.length > 16) {
         return false;
     }
 
-    final hasUppercase = RegExp(r'[A-Z]').hasMatch(password);
-    final hasLowercase = RegExp(r'[a-z]').hasMatch(password);
-    final hasNumber = RegExp(r'[0-9]').hasMatch(password);
+    final hasUppercase = RegExp(r'[A-Z]').hasMatch(_password);
+    final hasLowercase = RegExp(r'[a-z]').hasMatch(_password);
+    final hasNumber = RegExp(r'[0-9]').hasMatch(_password);
 
     return hasUppercase && hasLowercase && hasNumber;
   }
@@ -16,7 +16,7 @@ class _Password {
 
     String toString() {
         return (
-            'Your Password is: ${password}'
+            'Your Password is: ${_password}'
         );
     }
 }
