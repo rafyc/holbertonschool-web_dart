@@ -1,6 +1,6 @@
 import '6-password.dart';
 
-class User extend Password {
+class User extends Password {
     String name;
     int age;
     double height;
