@@ -30,7 +30,8 @@ class User extends Password {
         age: userJson['age'],
         height: userJson['height'],
         id: userJson['id'],
-    )}
+    );
+    }
 
     @override
     String toString() {
